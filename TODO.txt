@@ -1,6 +1,3 @@
-
-Get github check-in working!
-    fails credentials on popup, but they work interactively on website (with DUO MFA)
             
 Create script to add files for dayXX
     give error if dir already exists
@@ -15,7 +12,7 @@ Backfill from prior years as time permits
 
 Document dev environment
     necessary tools and how to install/configure them 
-        python 3.8.0+
+        python 3.11.0+
         pytest
         packages
 
