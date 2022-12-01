@@ -1,0 +1,21 @@
+Advent of Code (AoC) in Python notes
+
+Template idea
+https://pythonawesome.com/python-template-for-advent-of-code-event/
+
+
+Python solution strategy (very good)
+https://realpython.com/python-advent-of-code/
+
+
+Huge list of AOC resources!
+https://github.com/Bogdanp/awesome-advent-of-code
+
+Python package to get input data and submit answers
+https://pypi.org/project/advent-of-code-data/
+python -m pip install advent-of-code-data
+
+
+Project template processors
+https://copier.readthedocs.io/en/stable/
+https://cookiecutter.readthedocs.io/en/stable/

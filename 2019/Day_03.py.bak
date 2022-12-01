@@ -1,0 +1,42 @@
+#!/usr/bin/python
+
+#import text
+
+
+
+def MarkPath(grid,curX,curY, dir, dist, currWire):
+    return (curX, curY)
+    
+def CalculateClosestCrossing(grid):
+    print("calc closest...")
+
+
+def day3a(filename):
+    sum = 0
+    with open(filename, 'r') as infile:
+        lines = infile.readlines()
+        grid = 0
+        
+        currWire = 1 #    1 or 2
+        for line in lines:
+            # load list of comma separated integers into a zero-based array 
+            commands = line.split(",") 
+            print ("found %d navigation instructions" % len(commands))
+            # print (numbers)
+            curX = 0
+            curY = 0
+            for cmd in commands:
+                dir = cmd[:1]
+                dist = int(cmd[1:])
+                print("dir %s %d" % (dir,dist))
+
+                (curX,curY) = MarkPath(grid,curX,curY,dir, dist, currWire)
+                
+                print ("curr is %d %d" % (curX, curY))
+        
+            if currWire == 1:
+                currWire = 2
+            else:
+                CalculateClosestCrossing(grid)
+
+day3a("Day_03a.test")
