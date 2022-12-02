@@ -57,11 +57,11 @@ def day6a(filename):
         lines = infile.readlines()
         for line in lines:
             lineNum += 1
-            # print line.strip()
+            # print( line.strip())
             # m = re.match("turn on ([0-9]{0,3}),([0-9]{0,3}) through ([0-9]{0,3}),([0-9]{0,3}).*", line)
             m = re.match("([a-z ]{0,})([0-9]{0,3}),([0-9]{0,3}) through ([0-9]{0,3}),([0-9]{0,3}).*", line.strip())
             if m is None or len(m.groups()) != 5:
-                print "input error line %d %s" % (lineNum, line)
+                print( "input error line %d %s" % (lineNum, line))
                 return 
             if m.group(1) == "turn on ":
                 setGrid(TURN_ON, int(m.group(2)), int(m.group(3)), int(m.group(4)), int(m.group(5)))
@@ -70,24 +70,24 @@ def day6a(filename):
             if m.group(1) == "toggle ":
                 setGrid(TOGGLE, int(m.group(2)), int(m.group(3)), int(m.group(4)), int(m.group(5)))
 
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
 
 
 def test():
     initGrid()
     setGrid(TURN_ON, 0, 0, 2, 2)
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
     initGrid()
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
     setGrid(TURN_ON, 0, 0, 999, 999)
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
     setGrid(TURN_OFF, 0, 0, 2, 2)
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
     setGrid(TOGGLE, 0, 0, 999, 999)
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
     initGrid()
     setGrid(TURN_ON, 0, 0, 999, 0)
-    print "count is %d" % countGrid()
+    print( "count is %d" % countGrid())
 
 day6a("Day_06.input")
 

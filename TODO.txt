@@ -8,7 +8,7 @@ Add test driven dev with pytest or just asserts
 
 Backfill from prior years as time permits
     1. resubmit onces already solved
-    2. add pytests to rerun?
+
 
 Document dev environment
     necessary tools and how to install/configure them 

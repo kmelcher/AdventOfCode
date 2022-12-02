@@ -36,13 +36,13 @@ def day5a(filename):
         lines = infile.readlines()
         for line in lines:
             if isNice5a(line):
-                print "%s %s" % (line, "Nice")
+                print("%s %s" % (line, "Nice"))
                 niceCount += 1
             else:
-                print "%s %s" % (line, "naughty")
+                print("%s %s" % (line, "naughty"))
 
-        print "Nice Count = %d" % niceCount
-
+        print( "Nice Count = %d" % niceCount)
+        return niceCount
 # ----------------------------------------
 
 
@@ -65,7 +65,7 @@ def isNice5b(line):
     #  xyx
 
     for i in range(0, len(line)-2):
-        print "%s vs %s" % (line[i], line[i+2])
+        print( "%s vs %s" % (line[i], line[i+2]))
         if line[i] == line[i+2]:
             return True
 
@@ -79,17 +79,25 @@ def day5b(filename):
         lines = infile.readlines()
         for line in lines:
             if isNice5b(line.strip()):
-                print "%s %s" % (line, "Nice")
+                print("%s %s" % (line, "Nice"))
                 niceCount += 1
             else:
-                print "%s %s" % (line, "naughty")
+                print("%s %s" % (line, "naughty"))
                 naughtyCount += 1
-        print "Nice Count = %d" % niceCount
-        print "Naughty Count = %d" % naughtyCount
+        #print("Nice Count = %d" % niceCount)
+        #print("Naughty Count = %d" % naughtyCount)
+        return niceCount
 
-day5b("Day_05b.test.input")  # answer: 236
-#day5a("Day_05a.input")  # answer: 236
+result = day5a("Day_05a.test.input")  # answer: 236
+print("test 5a = %d" % result)
+assert result == 2
 
-#day5b("Day_05a.input")  # answer: 236
+result = day5a("Day_05a.input")  # answer: 236
+print("5a = %d" % result)
+assert result == 255
+
+result = day5b("Day_05a.input")  # answer: 236
+print("5b = %d" % result)
+assert result == 55
 
 # 49 too low
