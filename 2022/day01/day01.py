@@ -1,4 +1,4 @@
-#!/usr/bin/python# 
+#!/usr/bin/python#
 # Karl D. Melcher
 
 # Advent of Code 2022
@@ -13,48 +13,49 @@
 def rankElves(filename):
     with open(filename, 'r') as infile:
         lines = infile.readlines()
-        maxSumList=[]
+        maxSumList = []
         elfSum = 0
         for line in lines:
             line = line.strip()
             if (len(line) == 0):
-                #print("elfSum=%d" % elfSum)
+                # print("elfSum=%d" % elfSum)
                 maxSumList.append(elfSum)
-                elfSum=0
+                elfSum = 0
             else:
-                #print("line=%s" % line)
+                # print("line=%s" % line)
                 elfSum += int(line)
     return maxSumList
 
-    
+
 def day1a(filename):
     return max(rankElves(filename))
 
+
 def day1b(filename):
     elves = rankElves(filename)
-    assert len(elves) >=3
+    assert len(elves) >= 3
     elves.sort(reverse=True)
     return sum(elves[:3])
 
 
-print("Advent of Code day 01")        
-        
+print("Advent of Code day 01")
+
 sample = day1a("day01.sample.input.txt")
-print( "part 1 sample data result: %d" % sample)
+print("part 1 sample data result: %d" % sample)
 assert (sample == 24000)
 
 day1aresult = day1a("day01.input.txt")
-print( "part 1 result: %d" % day1aresult)
+print("part 1 result: %d" % day1aresult)
 assert (day1aresult == 65912)
 
 # part 2
 
 sample = day1b("day01.sample.input.txt")
-print( "part 2 sample data result: %d" % sample)
+print("part 2 sample data result: %d" % sample)
 assert (sample == 45000)
 
 day1bresult = day1b("day01.input.txt")
-print( "part 2 result: %d" % day1bresult)
+print("part 2 result: %d" % day1bresult)
 assert (day1bresult == 195625)
 
 print("Done.")
